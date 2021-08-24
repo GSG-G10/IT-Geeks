@@ -29,6 +29,7 @@ INSERT INTO users (first_name, last_name, email_address, phono_no, password) VAL
 INSERT INTO posts (title, content, category, user_id) VALUES 
 ('9 Code Review Techniques', 'We all know we won’t get very far without a code review. It improves the quality of the code and makes its structure more stable. Reviews also help programmers build', 'Programming', 2),
 ('10 famous programming languages', 'We all know we won’t get very far without a code review. It improves the quality of the code and makes its structure more stable. Reviews also help programmers build', 'Tech', 1),
-('DevOps', 'We all know we won’t get very far without a code review. It improves the quality of the code and makes its structure more stable. Reviews also help programmers build', 'DevOps', 3);
+('DevOps', 'We all know we won’t get very far without a code review. It improves the quality of the code and makes its structure more stable. Reviews also help programmers build', 'DevOps', 3),
+('DevOps', 'We all know we won’t get very far without a code review. It improves the quality of the code and makes its structure more stable. Reviews also help programmers build', 'DevOps', 3);;
 
 COMMIT;
