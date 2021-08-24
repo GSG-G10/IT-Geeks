@@ -14,6 +14,7 @@
     <title>IT Geeks</title>
   </head>
   <body>
+    <div class="bg-overlay" hidden></div>
     <header class="header">
       <div class="container">
         <div class="logo">
@@ -21,6 +22,7 @@
             <img src="images/logo.png" alt="logo" />
           </a>
         </div>
+        
         <nav>
           <ul class="nav-items">
             <li><a href="login.html">login</a></li>
@@ -29,6 +31,21 @@
         </nav>
       </div>
     </header>
+    <button class="new-post-btn">New Post</button>
+
+    <div id="add-note-form" hidden>
+      <label for="post-title">Enter Post Title</label>
+      <input type="text" name="post-title" id="post-title" class="post-title" placeholder="Enter Post Title">
+
+      <label for="post-excerpt">Enter Post Content</label>
+      <textarea name="post-excerpt" id="post-excerpt" class="post-excerpt" placeholder="Enter Post Content" cols="20" rows="10"></textarea>
+
+      <label for="post-category">Enter Post Category</label>
+      <input type="text" name="post-category" class="post-category" id="post-category" placeholder="Enter Post Category">
+
+      <button type="submit" class="post-btn">Send</button>
+      <button type="button" class="cancel-btn">Cancel</button>
+    </div>
 
     <main class="content-container"></main>
     <script src="js/dom.js"></script>

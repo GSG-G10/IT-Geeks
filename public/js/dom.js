@@ -1,4 +1,19 @@
 const contentContainer = document.querySelector('.content-container');
+const newPostBtn = document.querySelector('.new-post-btn');
+const cancelBtn = document.querySelector('.cancel-btn');
+const addNoteForm = document.getElementById('add-note-form');
+const bgOverlay = document.querySelector('.bg-overlay');
+
+newPostBtn.addEventListener('click', () => {
+  addNoteForm.toggleAttribute('hidden');
+  bgOverlay.toggleAttribute('hidden');
+  document.body.style.overflow = 'hidden';
+});
+cancelBtn.addEventListener('click', () => {
+  addNoteForm.toggleAttribute('hidden');
+  bgOverlay.toggleAttribute('hidden');
+  document.body.style.overflow = 'scroll';
+});
 
 const createElement = (tagName, className, parentNode, textContent) => {
   const elementName = document.createElement(tagName);
