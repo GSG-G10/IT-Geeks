@@ -6,4 +6,134 @@
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #f1f1f1;
+}
+.header {
+  margin-top: 30px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+.header .logo {
+  width: 175px;
+  margin-bottom: 25px;
+
+}
+.header .logo img {
+  width: 100%;
+}
+.nav-items {
+  display: flex;
+}
+.nav-items li {
+  list-style-type: none;
+  width: 95px;
+  text-align: center;
+  margin: 0 10px;
+  padding: 8px 0px;
+  border-radius: 30px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.nav-items li:first-child {
+  background-color: #296575;
+}
+.nav-items li:first-child:hover {
+  background-color: #0a4d5f;
+}
+.nav-items li:last-child {
+  background-color: #E6821B;
+}
+.nav-items li:last-child:hover {
+  background-color: #914b06;
+}
+.nav-items li a {
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+}
+.content-container {
+  width: 85%;
+  margin: 30px auto;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 42px;
+}
+.card {
+  background-color: #fff;
+  padding: 18px 26px;
+  border-radius: 18px;
+}
+.card-title {
+  margin: 8px 0;
+  font-size: 20px;
+}
+.card-excerpt {
+  margin-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card-author, 
+.card-date {
+  color: #e6821b;
+  font-size: 14px;
+}
+.card-date {
+  margin-left: 32px;
+}
+
+
+.card .card-category {
+  background-color: #296575;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.cards .card-category::before, 
+.cards .card-date::before, 
+.cards .card-author::before {
+  font-family: "Font Awesome 5 Free";
+  padding-right: 6px;
+}
+.cards .card-category::before {
+  content: "\f02b";
+  font-weight: 600;
+}
+.cards .card-author::before {
+  content: "\f2bd";
+  font-weight: 600;
+}
+.cards .card-date::before {
+  content: "\f073";
+}
+
+
+/* Media Query */
+@media screen and (min-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .header .container {
+    flex-direction: row;
+  }
+  .header .logo {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
