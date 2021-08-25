@@ -188,9 +188,49 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
   width: 100%;
   height: 100%;
 }
-
-
-
+.bg-img img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+}
+.text-container {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 40%;
+  padding: 50px 20px;
+  text-align: center;
+}
+.text-container h2 {
+  margin-bottom: 30px;
+}
+.login-signup-btns a {
+  text-decoration: none;
+  color: #000;
+  background-color: #ffffff;
+  padding: 10px 10px;
+  font-size: 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  width: 95px;
+  margin: 0 10px;
+  border: 2px solid #fff;
+}
+.login-signup-btns a:last-child {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
 /* Media Query */
 @media screen and (min-width: 700px) {
   .cards {
