@@ -3,6 +3,9 @@ const newPostBtn = document.querySelector('.new-post-btn');
 const cancelBtn = document.querySelector('.cancel-btn');
 const addNoteForm = document.getElementById('add-note-form');
 const bgOverlay = document.querySelector('.bg-overlay');
+const titleInput = document.querySelector('.post-title');
+const contentInput = document.querySelector('.post-excerpt');
+const categoryInput = document.querySelector('.post-category');
 
 newPostBtn.addEventListener('click', () => {
   addNoteForm.toggleAttribute('hidden');
@@ -30,10 +33,22 @@ fetch('/displayData')
   .then((posts) => {
     posts.forEach((post) => {
       const card = createElement('div', 'card', cards);
-      const cardCategory = createElement('span', 'card-category', card, post.category);
-      const cardTitle = createElement('h2', 'card-title', card, post.title);
-      const cardExcerpt = createElement('p', 'card-excerpt', card, post.content);
-      const cardAuthor = createElement('span', 'card-author', card, `${post.first_name} ${post.last_name}`);
-      const cardDate = createElement('span', 'card-date', card, post.date_created);
+      createElement('span', 'card-category', card, post.category);
+      createElement('h2', 'card-title', card, post.title);
+      createElement('p', 'card-excerpt', card, post.content);
+      createElement('span', 'card-author', card, `${post.first_name} ${post.last_name}`);
+      createElement('span', 'card-date', card, post.date_created);
     });
   });
+
+addNoteForm.addEventListener('submit', () => {
+  fetch('addData', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    // eslint-disable-next-line max-len
+    body: JSON.stringify({
+      // eslint-disable-next-line max-len
+      title: titleInput.value, content: contentInput.value, category: categoryInput.value, user_id: 1,
+    }),
+  });
+});
