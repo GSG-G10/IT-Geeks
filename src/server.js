@@ -10,7 +10,7 @@ app.use(compression());
 app.disable('x-powered-by');
 app.use(express.static(path.join(__dirname, '..', 'public'), { maxAge: '30d' }));
 
-app.set('port', process.env.PORT || 8080);
+app.set('port', process.env.PORT || 8000);
 
 app.use(router);
 

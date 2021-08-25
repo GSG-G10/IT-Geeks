@@ -1,4 +1,4 @@
-const getDataQuery = require('../database/queries');
+const { getDataQuery } = require('../database/queries');
 
 const displayData = (req, res) => {
   getDataQuery()

@@ -15,7 +15,7 @@ CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
     content TEXT,
-    category VARCHAR NOT NULL,
+    category VARCHAR(100) NOT NULL,
     user_id INTEGER NOT NULL REFERENCES users(id),
     date_created DATE NOT NULL DEFAULT CURRENT_DATE
 );

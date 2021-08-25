@@ -1,3 +1,4 @@
 const getDataQuery = require('./getData');
+const postDataQuery = require('./postData');
 
-module.exports = getDataQuery;
+module.exports = { getDataQuery, postDataQuery };
