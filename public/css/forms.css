@@ -17,7 +17,11 @@
   flex-direction: column;
   width: 90%;
 }
-
+.error-alert{
+  color: red;
+  display: block;
+  align-self: flex-start;
+}
 .form-input {
   width: 90%;
 }

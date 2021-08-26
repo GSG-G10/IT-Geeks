@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/forms.css" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <title>Login</title>
   </head>
   <body>
@@ -26,16 +26,29 @@
     <div class="containter-login">
       <section class="form">
         <form id="login-form">
-          <input type="email" class="email_address" name="email_address" placeholder="Enter Your Email"/>
-          <input type="password" class="password" name="password" placeholder="Enter Your Password"/>
+          <input
+          type="text"
+            class="email_address"
+            name="email_address"
+            placeholder="Enter Your Email"
+          />
+          <input
+            type="password"
+            class="password"
+            name="password"
+            placeholder="Enter Your Password"
+          />
+          <span class="error-alert"></span>
+
           <article class="btn">
-            <a  class="register" href="signup.html">Register</a>
+            <a class="register" href="signup.html">Register</a>
+
             <button type="submit" class="btu-login">LogIn</button>
           </article>
         </form>
       </section>
       <section class="right-side">
-        <img src="images/img.jpeg"/>
+        <img src="images/img.jpeg" />
       </section>
     </div>
     <script src="js/loginFetch.js"></script>
