@@ -13,13 +13,13 @@ const checkLogin = (req, res) => {
           if (result) {
             console.log('logged');
 
-            jwt.sign({ is_login: true }, 'acdefghij', (error, token) => {
+            jwt.sign({ is_Admin: true }, 'acdefghij', (error, token) => {
               if (error) {
                 console.log(error);
                 res.status(500).json({ msg: 'internal server error !' });
               } else {
                 console.log(token);
-                res.cookie('token', token, { httpOnly: true, secure: true, maxAge: 900000 }).redirect(301, '/dashboard.html');
+                res.cookie('token', token, { httpOnly: true, secure: true, maxAge: 900000 }).cookie('login', true).redirect(301, '/dashboard.html');
               }
             });
           } else {

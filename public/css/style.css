@@ -231,6 +231,18 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
   border: 2px solid #fff;
   color: #fff;
 }
+.logout {
+  width: 95px;
+  text-align: center;
+  margin: 0 10px;
+  padding: 10px 0px;
+  border-radius: 30px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 0;
+  background-color: #2f2f2f;
+  color: #fff;
+}
 /* Media Query */
 @media screen and (min-width: 700px) {
   .cards {
