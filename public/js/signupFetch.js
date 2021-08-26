@@ -5,8 +5,28 @@ const phoneNoInputInput = document.getElementById('phone_no');
 const emailInput = document.getElementById('email_address');
 const passwordInput = document.getElementById('signup-password');
 const signupCoPassword = document.getElementById('signup-co-password');
+const errorAlert = document.querySelector('.error-alert');
+
 signupForm.addEventListener('submit', (e) => {
   e.preventDefault();
+  if (firstNameInput.value === '') {
+    errorAlert.textContent = 'first name should not be empty';
+  } else if (lastNameInput.value === '') {
+    errorAlert.textContent = 'last name should not be empty';
+  } else if (phoneNoInputInput.value === '') {
+    errorAlert.textContent = 'phone number should not be empty';
+  } else if (emailInput.value === '') {
+    errorAlert.textContent = 'Email should not be empty';
+  } else if (!emailInput.value.includes('@')) {
+    errorAlert.textContent = 'Enter correct email address';
+  } else if (passwordInput.value === '') {
+    errorAlert.textContent = 'password should not be empty';
+  } else if (signupCoPassword.value === '') {
+    errorAlert.textContent = 'confirm password should not be empty';
+  } else if (passwordInput.value !== signupCoPassword.value) {
+    errorAlert.textContent = 'password dows not match';
+  }
+
   fetch('/signup', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
