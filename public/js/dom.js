@@ -42,7 +42,7 @@ fetch('/displayData')
   });
 
 addNoteForm.addEventListener('submit', () => {
-  fetch('addData', {
+  fetch('/addData', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     // eslint-disable-next-line max-len

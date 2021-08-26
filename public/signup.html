@@ -36,61 +36,60 @@
           <p class="title">Register</p>
         </div>
         <div>
-          <form action="/signup" class="form-field">
-            <div class="form-div">
-              <label for="">First Name </label><br />
+          <form class="signup-form">
+              <label for="first_name">First Name </label>
               <input
+              name="first_name"
                 class="form-input"
+                id="first_name"
                 type="text"
                 placeholder="Enter your First Name"
               />
-            </div>
-            <div class="form-div">
-              <label for="">Last Name </label><br />
+              <label for="last_name">Last Name </label>
               <input
+              name="last_name"
                 class="form-input"
+                id="last_name"
                 type="text"
                 placeholder="Enter your Last Name"
               />
-            </div>
-            <div class="form-div">
-              <label for="">Phone Number </label><br />
+              <label for="phone_no">Phone Number </label>
               <input
+              name="phono_no"
                 class="form-input"
+                id="phone_no"
                 type="text"
                 placeholder="Enter your Phone Number"
               />
-            </div>
-            <div class="form-div">
-              <label for="">Email </label><br />
+              <label for="email_address">Email </label>
               <input
+              name="email_address"
                 class="form-input"
+                id="email_address"
                 type="text"
                 placeholder="Enter your Email"
               />
-            </div>
-            <div class="form-div">
-              <label for="">Password </label><br />
+              <label for="signup-password">Password </label>
               <input
+              name="password"
                 class="form-input"
-                type="text"
+                id="signup-password"
+                type="password"
                 placeholder="Enter your Password"
               />
-            </div>
-            <div class="form-div">
-              <label for="">Confirm Password </label><br />
+              <label for="signup-co-password">Confirm Password </label>
               <input
+              name="signup-co-password"
                 class="form-input"
-                type="text"
+                id="signup-co-password"
+                type="password"
                 placeholder="Enter your Confirm Password"
               />
-            </div>
-            <div class="form-div">
               <button class="btn-submit" type="submit">submit</button>
-            </div>
           </form>
         </div>
       </div>
     </div>
+    <script src="js/signupFetch.js"></script>
   </body>
 </html>
